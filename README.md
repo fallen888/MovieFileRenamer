@@ -14,6 +14,9 @@ A simple Windows desktop application that helps rename movie file names.
   
   
 ![Alt Screen 1](https://github.com/fallen888/MovieFileRenamer/raw/master/screenshots/screen2.png)
+  
+
+You can download a pre-built release [here](https://github.com/fallen888/MovieFileRenamer/releases/).
 
   
 Released under MIT License.
