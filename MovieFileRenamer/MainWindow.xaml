@@ -12,7 +12,7 @@
         <Label Content="Just drag your movie files in here:" HorizontalAlignment="Left" Margin="8,18,0,0" VerticalAlignment="Top"/>
         <Label Content="Use 'Delete' key to delete individual files from list." Margin="598,397,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBlock HorizontalAlignment="Left" Margin="729,442,0,-7" TextWrapping="Wrap" VerticalAlignment="Top" Width="141">
-            <Hyperlink NavigateUri="http:/www.google.com/" RequestNavigate="Hyperlink_RequestNavigate">About Movie File Renamer</Hyperlink>
+            <Hyperlink NavigateUri="https://github.com/fallen888/MovieFileRenamer" RequestNavigate="Hyperlink_RequestNavigate">About Movie File Renamer</Hyperlink>
         </TextBlock>
     </Grid>
 </Window>
