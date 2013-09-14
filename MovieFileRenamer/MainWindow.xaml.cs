@@ -42,6 +42,7 @@ namespace FileRenamer
                 "1080",
                 "hdtv",
                 "x264",
+                "h264",
                 "ac3",
                 "dts",
                 "aac",
@@ -142,24 +143,31 @@ namespace FileRenamer
 
         private void RenameButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.MediaFileList.Count == 0)
+            try
             {
-                MessageBox.Show(Application.Current.MainWindow, "Nothing to do.", "Nothing To Do", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.None);
-                return;
-            }
-
-            this.MediaFileList.ForEach((file) =>
-            {
-                var oldName = file.FolderPath + "\\" + file.OriginalName;
-                var newName = file.FolderPath + "\\" + file.NewName;
-
-                if (oldName != newName)
+                if (this.MediaFileList.Count == 0)
                 {
-                    File.Move(oldName, newName);
+                    MessageBox.Show(Application.Current.MainWindow, "Nothing to do.", "Nothing To Do", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.None);
+                    return;
                 }
-            });
 
-            MessageBox.Show(Application.Current.MainWindow, "Done!", "Operation Complete", MessageBoxButton.OK, MessageBoxImage.Exclamation, MessageBoxResult.None);
+                this.MediaFileList.ForEach((file) =>
+                {
+                    var oldName = file.FolderPath + "\\" + file.OriginalName;
+                    var newName = file.FolderPath + "\\" + file.NewName;
+
+                    if (oldName != newName)
+                    {
+                        File.Move(oldName, newName);
+                    }
+                });
+
+                MessageBox.Show(Application.Current.MainWindow, "Done!", "Operation Complete", MessageBoxButton.OK, MessageBoxImage.Exclamation, MessageBoxResult.None);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Application.Current.MainWindow, ex.Message, "ERROR!", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None);
+            }
         }
 
 
