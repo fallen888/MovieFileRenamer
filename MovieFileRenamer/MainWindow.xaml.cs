@@ -47,9 +47,15 @@ namespace FileRenamer
                 "dts",
                 "aac",
                 "brrip",
+                "bdrip",
                 "bluray",
                 "hdrip",
-                "xvid"
+                "dvdrip",
+                "webrip",
+                "xvid",
+                "extended",
+                "5.1",
+                "7.1"
             };
         }
 
